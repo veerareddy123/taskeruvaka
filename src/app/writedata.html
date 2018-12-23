@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form name="contact">  
+    <input name="email" type="name" placeholder="Name" required> <br>
+  <input name="email" type="email" placeholder="Email" required> <br>
+  <input name="email" type="role" placeholder="Role" required> <br>
+  <button type="submit">Send</button>  
+ </form>  
+ <script>  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbysvWkOAPpPJviGpkSIZtHsT_FagKGXiCWPQhdIP0Cv_xW782NI/exec'  
+  const form = document.forms['contact']  
+  form.addEventListener('submit', e => {  
+   e.preventDefault()  
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
+    .then(response => console.log('Success!', response))  
+    .catch(error => console.error('Error!', error.message))  
+  })  
+ </script> 
+  </body>
+</html>
+
+
