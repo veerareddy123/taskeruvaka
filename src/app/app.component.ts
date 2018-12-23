@@ -14,7 +14,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'taskeruvaka';
+  // title = 'taskeruvaka';
   public user:any = SocialUser;
 
   constructor(private authService: AuthService) { }
